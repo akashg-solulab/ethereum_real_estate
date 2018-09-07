@@ -1,0 +1,48 @@
+{
+  "name": "blockchain-real-estate-v1",
+  "version": "0.0.1",
+  "description": "POC of real-estate app with blockchain parts",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "start:eth": "ganache-cli -m \"candy maple cake sugar pudding cream honey rich smooth crumble sweet treat\" --gasLimit 8000000 --gasPrice 100000000000 --defaultBalanceEther 25000 --account=\"0xc87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3,1000000000000000000000000000000000000000\"",
+    "lint": "eslint api/ server/",
+    "test": "cd ethereum && truffle test",
+    "test:performance": "cd ethereum && truffle test ./test/performance.js",
+    "truffle:cm": "cd ethereum && truffle compile && truffle migrate",
+    "truffle:bytecode": "cd ethereum && node bytecode-size-printer.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "lodash": "^4.17.10",
+    "moment": "^2.21.0",
+    "pg": "^7.4.1",
+    "pg-hstore": "^2.3.2",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "sequelize": "^4.33.4",
+    "truffle-contract": "^3.0.3",
+    "web3": "^0.20.4",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.13.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-node": "^5.2.1",
+    "ganache-cli": "^6.0.3",
+    "web3-utils": "^1.0.0-beta.30"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "real-estate",
+    "smart contracts"
+  ],
+  "author": "Indrek Värva & Vladyslav Kopylash",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
